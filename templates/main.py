@@ -3,7 +3,7 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route('/FizzBuzz')
-def fizzbuzz():
+def FizzBuzz():
     FizzBuzz_data = []
     for i in range(1, 101):
         if i % 3 == 0 and i % 5 == 0:
