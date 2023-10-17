@@ -4,19 +4,19 @@ app = Flask(__name__)
 
 @app.route('/fizzbuzz')
 def FizzBuzz():
-    fizzbuzz_data = []
+    fizzbuzz = []
         
     for i in range(1, 101):
         if i % 3 == 0 and i % 5 == 0:
-            fizzbuzz_data.append('FizzBuzz')
+            fizzbuzz.append('FizzBuzz')
         elif i % 3 == 0:
-            fizzbuzz_data.append('Fizz')
+            fizzbuzz.append('Fizz')
         elif i % 5 == 0:
-            fizzbuzz_data.append('Buzz')
+            fizzbuzz.append('Buzz')
         else:
-            fizzbuzz_data.append(i)
+            fizzbuzz.append(i)
     
-    return render_template('fizzbuzz.html', fizzbuzz_data=fizzbuzz_data)
+    return render_template('fizzbuzz.html', fizzbuzz=fizzbuzz)
 
 
 if __name__ == '__main__':
